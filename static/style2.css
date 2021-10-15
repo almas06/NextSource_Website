@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.toggle-btn{
+    position: absolute;
+    width: 35px;
+    right: 70px;
+    top: 40px;
+    display: none;
+}
+.toggle-btn span{
+    /* display: inline-block; */
+    width: 100%;
+    height: 2px;
+    float: left;
+    margin-bottom: 8px;
+    background-color: red;
+}
+
+.home{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+nav{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    padding: 25px 35px;
+    width: 160px;
+    height: 85px;
+}
+.navlinks{
+    margin-right: 40px;
+}
+
+.navlinks ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 20px;
+    margin: 20px 10px;
+    position: relative;
+}
+.navlinks ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.navlinks ul li :after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navlinks ul li :hover:after{
+    width: 100%;
+}
+.navlinks ul li p{
+    color:white !important;
+}
+/* ---------------------------------------------CONTENT----------------------------------------------------------- */
+.home-content{
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+}
+.home-content h1{
+    font-size: 50px;
+}
+
+.btn{
+    margin-top: 50px;   
+}
+.btn a{
+    text-decoration: none;
+    background: transparent;
+    color: white;
+    padding: 10px 25px;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+.btn a:hover{
+    background: rgb(245, 46, 46);
+}
+label #bars,
+label #cross{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+#check-box{
+    display: none;
+}
+
+/* ===========================LOGIN-BOX================================================================= */
+.login{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("bg.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+}
+.signup-box{
+    width: 330px;
+    height: 430px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: black;
+    top: 56%;
+    left: 40%;
+    transform: translate(-50% , -50%);
+}
+.login-box{
+    width: 330px;
+    height: 350px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: black;
+    top: 56%;
+    left: 40%;
+    transform: translate(-50% , -50%);
+}
+.person{
+    padding: 10px 10px;
+    border-radius: 50%;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    top: -50px;
+    position: absolute;
+    left: calc(50% - 38px);
+}
+.signup-box h1,
+.login-box h1{
+    padding-top: 40px;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+}
+.signup-box p,
+.login-box p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    padding-left: 30px;
+    padding-top: 30px;
+    font-weight: bold;
+}
+.signup-box input[type="text"] , input[type="password"], input[type="email"],
+.login-box input[type="text"] , input[type="password"]{
+    outline: none;
+    color: beige;
+    background-color: transparent;
+    margin-left: 30px;
+    height: 40px;
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+.signup-box input[type="submit"],
+.login-box input[type="submit"]{
+    font-size: 17px;
+    font-weight: bold;
+    background-color: red;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 40px;
+    width: 250px;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.signup-box input[type="submit"]:hover
+.login-box input[type="submit"]:hover{
+    background: grey;
+    cursor: pointer;
+}
+.signup-box a
+.login-box a{
+    text-decoration: none;
+    color: darkgrey;
+    font-size: 13px;
+    margin-left: 30px;
+    line-height: 20px;
+}
+.signup-box a:hover
+.login-box a:hover{
+    color: red;
+}
+/* ----------------------------------------Data structures and Algorithm------------------------------------------ */
+.dsa-home{
+     min-height: 90vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("bg.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+}
+.main-heading{
+    margin-top: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.main-heading h1{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 40px;
+}
+.main-heading h4{
+    color: white;
+    font-size: 22px;
+    padding-bottom: 7px;
+}
+.main-heading p{
+    line-height: 30px;
+    color: rgb(194, 191, 189);
+}
+.main-heading .btn{
+    margin-top:10px ;
+}
+.sources h1{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 50px;
+    /* padding-bottom: 40px; */
+}
+.sources h1:after{
+    content: '';
+    height: 3px;
+    width: 8%;
+    background: red;
+    display: block;
+    margin: auto;
+}
+hr{
+    margin: auto;
+    width: 90%;
+}
+.sources h3{
+    padding-top: 30px;
+    margin-left: 230px;
+    color: rgb(54, 53, 53);
+}
+table{
+    width: 900px;
+    margin: auto;
+    margin-top: 11px !important;
+    margin-bottom: 25px !important;
+    text-align: center;
+}
+th{
+    background-color: grey;
+    font-size: 18px;
+}
+td{
+    background-color: rgb(211, 208, 208);
+}
+td a{
+    text-decoration: none;
+}
+table,th,td{
+    border-collapse: collapse;
+    padding: 25px;
+}
+ 

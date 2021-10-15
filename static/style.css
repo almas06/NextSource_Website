@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://source.unsplash.com/1600x700/?laptop,phone,table");
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding:2% 6%;
+    align-items: center;
+}
+nav h1{
+    font-size: 25px;
+    color: white;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 18px;
+    position: relative;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+.nav-links ul li::after{
+    content: "";
+    width:0%;
+    height: 2px;
+    background-color: red;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    cursor: pointer;
+}
+.header-text{
+    color: white;
+    width: 90%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+}
+.header-text h1{
+    font-size: 45px;
+    font-weight: 600;
+
+}
+.header-text h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+.header-text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 10px 0 30px 0;
+}
+.header-text a{
+    text-decoration: none;
+    color: white;
+    width: 50%;
+    border: 1px solid white;
+    padding: 8px 15px;
+    background:transparent;
+    transition: 0.8s;
+}
+.header-text a:hover{
+    background-color: red;
+    border: 1px solid red;
+}
+nav .fa{
+    display: none;
+}
+@media (max-width:800px){
+    nav h1{
+        font-size: 22px;
+    }
+    .header-text h1{
+        font-size: 35px;
+    
+    } 
+    .header-text p{
+        font-size: 14px;
+    }
+    .nav-links{
+        visibility: hidden;
+        position: absolute;
+        background-color: red;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0px;
+        text-align:left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .nav-links ul{
+        padding: 20px 10px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+@media (max-width:480px){
+    .header-text{
+        top: 30%;
+    }
+    .header-text h1{
+        font-size: 30px;
+    } 
+    .header-text p{
+        font-size: 12px;
+    }
+}
+
+/* -------------------------------------------SUBJECTS----------------------------------------------------- */
+
+.subjects{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;
+}
+.subjects h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: black !important;
+}
+.subjects .row{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.subject-col{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.8s;
+    box-shadow: 0px 2px 6px grey;
+}
+.subject-col:hover{
+    box-shadow: 0px 7px 10px grey;
+}
+.subject-col h3{
+    text-align: center;
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.subject-col p{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 22px;
+}
+.subject-col a{
+    text-decoration: none;
+    color: rgb(56, 55, 55);
+    font-size: 14px;
+    width: 50%;
+    padding: 7px 20px;
+    border: 1px solid rgb(56, 55, 55);
+    font-weight: 500;
+    transition: 1s;
+}
+.subject-col a:hover{
+    background-color: red;
+    color:white;
+    border: 1px solid red;
+}
+@media (max-width:800px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* -----------------------------CONTACT------------------------------------------------- */
+.contact{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;
+}
+.contact h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+.contact .row{
+    margin-top: 5%;
+    justify-content: space-between;
+    display: flex;
+}
+.contact-col{
+    flex-basis: 45%;
+
+}
+iframe{
+    width: 420px;
+    height: 300px;
+    margin-right: -40px;
+}
+input{
+    margin-left: -40px !important;
+    width: 100%;
+    height: 38px;
+    padding-left: 5px;
+    margin: 10px;
+}
+input[type="textarea"]{
+    height: 130px;
+}
+::placeholder{
+    font-size: 15px;
+}
+input[type="submit"]{
+    width: 70%;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid rgb(49, 48, 48);
+    transition: 1s;
+}
+input[type="submit"]:hover
+{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+@media (max-width:800px){
+    .contact .row{
+        flex-direction: column-reverse;
+    } 
+    input{
+        width: 90%;
+    }
+    input[type="submit"]{
+        width: 60%;
+        margin-bottom: 50px;
+        
+    }
+}
+@media (max-width:480px){
+    iframe{
+        width: 300px;
+        height: 250px;
+    }
+}
+/* -------------ABOUT--------------------------------------------- */
+.about{
+    background: #fff3f3;
+    margin-top: 50px;
+    width: 100%;
+    text-align:center;
+    padding: 10px 0px;
+}
+.about h1{
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.about a{
+    text-decoration: none;
+    color: rgb(219, 35, 35);
+    font-size: 15px;
+}
+.socials .fa{
+    border:1px solid grey;
+    color: rgb(71, 69, 69);
+    border-radius: 5px;
+    margin: 20px 13px;
+    cursor: pointer;
+    padding: 8px 10px;
+    transition: 1s;
+}
+.socials .fa:hover{
+    border:1px solid red;
+    background-color: red;
+    color: white;
+}
+.fa-heart{
+    color: red;
+}
+@media (max-width:800px){
+    .about p{
+        font-size: 14px;
+    }
+}
+/* -------------------------------LOGIN - SIGNUP PAGE-------------------------------------------- */
+.main{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://source.unsplash.com/1600x700/?contact,phone,register");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: white;
+    padding: 5px;
+}
+.toggle-btn-box{
+    width: 300px;
+    height: 50px;
+    margin: 20px auto;
+    background: #fff3f3;
+    border-radius: 15px;
+}
+.toggle-btn{
+    width: 140px;
+    height: 50px;
+    padding: 5px 10px;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.social-icons{
+    text-align: center;
+}
+.social-icons .fa{
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #fff3f3; 
+}
+.form{
+    top: 180px;
+    width: 280px;
+    position: absolute;
+}

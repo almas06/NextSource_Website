@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.subject-header{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://source.unsplash.com/1600x700/?data,laptop,structure");
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding:2% 6%;
+    align-items: center;
+}
+nav h1{
+    font-size: 25px;
+    color: white;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    margin-top: 5px;
+}
+.nav-links ul{
+    display: inline-flex;
+}
+.nav-links ul li{
+    list-style: none;
+    padding: 8px 18px;
+    position: relative;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+.nav-links ul li::after{
+    content: "";
+    width:0%;
+    height: 2px;
+    background-color: red;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    cursor: pointer;
+}
+.subject-text{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.subject-text h1{
+    font-size: 45px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 5px;
+    background: transparent;
+    -webkit-text-stroke: 1px white;
+}
+.subject-text p{
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 35px;
+}
+.subject-text a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 18px;
+    width: 90%;
+    border: 1px solid white;
+    font-size: 15px;
+    transition: 0.8s;
+}
+.subject-text a:hover{
+    background-color: red;
+    border: 1px solid red;
+}
+/* --------------------------------SOURCES---------------------------------------- */
+
+.sources{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;  
+}
+.sources h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+/* .sources h2::after{
+    content: "";
+    width: 20%;
+    height: 3px;
+    color: red;
+    background-color: red;
+    position: absolute;
+} */
+.topic-row{
+    display: flex;
+    margin: 60px 0px 50px 0;
+}
+.topic-row .topic-col{
+    flex-basis: 25%;
+    box-shadow: 0px 2px 6px grey;
+    margin: 10px 20px;
+    padding: 20px 10px;
+    text-align: left;
+    transition: 0.5s;
+}
+.topic-row .topic-col:hover{
+    box-shadow: 0px 5px 6px grey;
+}
+.topic-row .topic-col h3{
+    padding-bottom: 10px;
+}
+.topic-row .topic-col a{
+    color: black;
+    transition: 0.8s;
+}
+.topic-row .topic-col a:hover{
+    color: red;
+}
+.fa{
+    padding-right: 8px;
+}
+.fa-play-circle{
+    color: red;
+}
+.fa-book{
+    color: rgb(36, 104, 168);
+}

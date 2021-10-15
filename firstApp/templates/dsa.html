@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Source - Best Sources Ever</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style3.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- AOS for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- -----HEADER--------------------------- -->
+   <section class="subject-header">
+    <nav>
+        <div class="logo" data-aos="fade-right">
+            <a href="#"><h1><font color="red">Next</font>Source.</h1></a>
+        </div>
+        <div class="nav-links" id="nav-links" data-aos="fade-left">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="/" class="active">HOME</a></li>
+                <li><a href="#">SUBJECTS</a>
+                    <!-- <ul>
+                        <li><a href="">DSA</a></li>
+                        <li><a href="">OOPS</a></li>
+                    </ul>
+                 -->
+                </li>
+                {% if user.is_authenticated %}
+                <li><a href="/signup">SIGNUP</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav> 
+
+    <div class="subject-text">
+        <h1>DataStructures</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident facilis dicta consectetur
+             laboriosam, nostrum non nulla itaque nam aut? Excepturi quam veniam sunt enim laboriosam,
+              tenetur maxime ipsa magnam impedit!</p>
+        <a href="#sources">Take a look <span>&#x2193;</span></a>
+    </div>
+   </section> 
+
+   <!-- --------SOURCES------------------------ -->
+   <section class="sources" id="sources">
+       <h2>Best Learning Sources</h2>
+       <div class="topic-row">
+           <div class="topic-col">
+              <h3>Arrays</h3> 
+              <a href=""><i class="fa fa-play-circle"></i>Understand by video</a><br>
+               <a href=""><i class="fa fa-book"></i>Read Theory</a>
+            </div>
+            <div class="topic-col">
+                <h3>LinkedList</h3> 
+                <a href=""><i class="fa fa-play-circle"></i>Understand by video</a><br>
+               <a href=""><i class="fa fa-book"></i>Read Theory</a>
+              </div>
+              <div class="topic-col">
+                <h3>Stack</h3> 
+                <a href=""><i class="fa fa-play-circle"></i>Understand by video</a><br>
+               <a href=""><i class="fa fa-book"></i>Read Theory</a>
+              </div>
+              <div class="topic-col">
+                <h3>Queue</h3> 
+                <a href=""><i class="fa fa-play-circle"></i>Understand by video</a><br>
+               <a href=""><i class="fa fa-book"></i>Read Theory</a>
+              </div>
+       </div>
+   </section>
+
+<!-- -------------ABOUT------------------------------------------ -->
+
+   <section class="about" id="about">
+    <h1 data-aos="fade-down">About</h1>
+    <p data-aos="fade-in">I am a Computer Science student currently pursuing a Bachelor's degree from <br>Modern Education Society's College of Engineering.
+    Interested in Frontend Development <br>and a passion for Web designing and User Interface Development.<br>
+     Data structures & algorithms enthusiast. . . <a href="">Read More</a></p>
+    <div class="socials">
+        <i class="fa fa-linkedin"></i>
+        <i class="fa fa-github"></i>
+        <i class="fa fa-instagram"></i>
+    </div>
+     <b><p>Made with <i class="fa fa-heart"></i>by <font color="red">Next</font>Source </p></b>
+    
+</div>
+</section>
+
+
+
+   <!-------------- JAVASCRIPT------------- -->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+       var navLinks = document.getElementById("nav-links")
+       function showMenu(){
+           navLinks.style.visibility = "visible";
+       }
+       function hideMenu(){
+           navLinks.style.visibility = "hidden";
+       }
+       AOS.init({
+      duration: 3000,
+      easing: 'ease',
+    });
+   </script>
+
+</body>
+</html>

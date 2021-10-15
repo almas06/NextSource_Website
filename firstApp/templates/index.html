@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block home %}
+
+   <!-- ---------HEADER----------------------- -->
+    <section id="home" class="home">
+        <nav>
+            <div class="logo" data-aos="fade-right">
+                <a href="#"><h1><font color="red">Next</font>Source.</h1></a>
+            </div>
+            <div class="nav-links" id="nav-links" data-aos="fade-left">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="#subjects">SUBJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="/signout" style="color: rgb(235, 125, 125);">LOGOUT</a></li>
+                    {% else %}
+                    <li><a href="/signup" style="color: rgb(235, 125, 125);">SIGNUP</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="header-text">
+            {% if user.is_authenticated %}
+            <h3 data-aos="fade-down"><font color="#eb7d7d">Hello, {{user.username}}</font></h3>
+            {% endif %}
+            <h1 data-aos="fade-down">Welcome to <font color="red">Next</font>Source</h1>
+            <p data-aos="fade-down">A website that provides you a lot of resources to learn concepts<br>
+                like Datastructures, Algorithms,Computer Graphics, Object Oriented<br>
+                Programming and a lot more.</p>
+            <div data-aos="zoom-in">
+                <a href="#subjects" >Explore Now</a>
+            </div>
+            
+            
+        </div>
+    </section>
+   <!-- ---------SUBJECTS----------------------- -->
+    <section class="subjects" id="subjects">
+        <h1 data-aos="fade-down">Subjects</h1>
+        <div class="row" data-aos="fade-right">
+            {% for subject in subjects %}
+            <div class="subject-col">
+                <h3>{{subject.title}}</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium impedit,
+                     quos nisi dignissimos atque sit quia !
+                </p>
+                {% if user.is_authenticated %}
+                <a href=/dsa>Read More</a>
+                {% else %}
+                <a href="/loginUser">Read More</a>
+                {% endif %}
+            </div>
+            {% endfor %} 
+        </div>
+    </section>
+
+    <!-- -----------CONTACT-------------------- -->
+    <section class="contact" id="contact">
+        <h1 data-aos="fade-down">Contact Us</h1>
+        <div class="row">
+            <div class="contact-col" data-aos="fade-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30258.576899159438!2d73.86503227410951!3d18.559511242706847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1209df24047%3A0x89db7c87936467e5!2sYerawada%2C%20Pune%2C%20Maharashtra%20411006!5e0!3m2!1sen!2sin!4v1631784661484!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <form action="mailto:almas.dinani01@gmail.com" class="contact-col" data-aos="fade-left">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="textarea" name="message" placeholder="Enter your message here" required>
+                <input type="submit" value="Send Message">
+        </form>
+            
+            
+        </div>
+    </section>
+
+    <!-- -----------ABOUT-------------------- -->
+    <section class="about" id="about">
+            <h1 data-aos="fade-down">About</h1>
+            <p data-aos="fade-in">I am a Computer Science student currently pursuing a Bachelor's degree from <br>Modern Education Society's College of Engineering.
+            Interested in Frontend Development <br>and a passion for Web designing and User Interface Development.<br>
+             Data structures & algorithms enthusiast. . . <a href="https://almas06.github.io/Portfolio_DSC_Hackathon/">Read More</a></p>
+            <div class="socials">
+                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-github"></i>
+                <i class="fa fa-instagram"></i>
+            </div>
+             <b><p>Made with <i class="fa fa-heart"></i> by <font color="red">Next</font>Source </p></b>
+            
+        </div>
+    </section>
+
+
+    <!-------------- JAVASCRIPT------------- -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        var navLinks = document.getElementById("nav-links")
+        function showMenu(){
+            navLinks.style.visibility = "visible";
+        }
+        function hideMenu(){
+            navLinks.style.visibility = "hidden";
+        }
+        AOS.init({
+       duration: 3000,
+       easing: 'ease',
+     });
+    </script>
+
+{% endblock home %}    

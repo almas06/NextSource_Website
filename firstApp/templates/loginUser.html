@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Source - Best Sources Ever</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style1.css' %}"/>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- AOS for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head> 
+<body> 
+    <section class="main">
+        <div class="logo" data-aos="fade-right">
+            <a href="/"><h1><font color="red">Next</font>Source.</h1></a>
+        </div>
+
+        <div class="form-box">
+            <h3>Login</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/almas-dinani/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/almas06 "><i class="fa fa-github"></i></a>
+                <i class="fa fa-instagram"></i>
+            </div>
+            <form method="POST" class="form" id="login" >
+                {% csrf_token %}
+                <input type="text" class="input-field" name="username" placeholder="Username" required>
+                <input type="password" class="input-field" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="/signup">Signup</a></p>
+            </form>
+        </div>
+    </section>
+</body> 
+</html>
